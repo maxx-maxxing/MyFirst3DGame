@@ -1,0 +1,53 @@
+# ========== UNITY - CORE ==========
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+
+# Unity auto-generated
+sysinfo.txt
+.DS_Store
+*.svd
+*.pdb
+*.mdb
+
+# Crash reports
+[Cc]rash[Dd]umps/
+
+# Unity Collaborate / PlasticSCM
+[Pp]lasticSCM/
+[Cc]ollab/
+
+# Builds
+*.apk
+*.aab
+*.xcodeproj
+*.xcworkspace
+*.xcuserstate
+*.xcuserdata/
+*.ipch
+*.obj
+
+# Other IDEs
+.vscode/
+*.unityproj
+
+# ========== KEEP THESE FOLDERS ==========
+!Assets/
+!ProjectSettings/
+!Packages/
