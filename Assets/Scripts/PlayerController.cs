@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     private bool isGrounded;
 
+    public int score;
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.GetContact(0).normal == Vector3.up)
@@ -25,6 +27,17 @@ public class PlayerController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void AddScore(int amount) // Called when coin is collected
+    {
+        score += amount;
+        // FIXME: Update score text UI
+    }
+
+    void Start()
+    {
+        Debug.Log(score);
+    }
+    
     void Update()
     {
         float x = Input.GetAxisRaw("Horizontal") * moveSpeed;
