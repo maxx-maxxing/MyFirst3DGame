@@ -1,4 +1,8 @@
 using UnityEngine;
+using UnityEngine.SceneManagement; // Lets you reload scenes (Game Over)
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +18,11 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = true;
         }
+    }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     void Update()
@@ -39,6 +48,11 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = false;
             rig.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+
+        if (rig.position.y < -5)
+        {
+            GameOver();
         }
     }
 }

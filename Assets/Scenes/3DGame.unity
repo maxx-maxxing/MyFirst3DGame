@@ -559,7 +559,7 @@ GameObject:
   - component: {fileID: 2028989237}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -765,6 +765,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1324812208781820008, guid: 19e0a46851d594baa93f7c7ed539fa95, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324812208781820008, guid: 19e0a46851d594baa93f7c7ed539fa95, type: 3}
+      propertyPath: moveOffset.x
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7748062471745437837, guid: 19e0a46851d594baa93f7c7ed539fa95, type: 3}
       propertyPath: m_Name
       value: Enemy
