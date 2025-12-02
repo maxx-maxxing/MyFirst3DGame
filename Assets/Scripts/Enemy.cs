@@ -5,7 +5,9 @@ public class Enemy : MonoBehaviour
 {
     public float speed; // How fast enemy moves toward startPos
     public Vector3 moveOffset; // Amount enemy teleports w each Update call
+    [SerializeField]
     private Vector3 targetPos; // Coordinates that trigger IF statement
+    [SerializeField]
     private Vector3 startPos; // Coords where enemy starts
 
     private void OnTriggerEnter(Collider other)
@@ -14,6 +16,28 @@ public class Enemy : MonoBehaviour
         {
             other.GetComponent<PlayerController>().GameOver();
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Vector3 from;
+        Vector3 to;
+        
+        if (Application.isPlaying)
+        {
+            from = startPos;
+            to = startPos + moveOffset;
+        }
+        else
+        {
+            from = transform.position;
+            to = transform.position + moveOffset;
+        }
+        Gizmos.DrawLine(from, to);
+        Gizmos.DrawWireSphere(from, .2f);
+        Gizmos.DrawWireSphere(to, .2f);
+        
     }
 
 
