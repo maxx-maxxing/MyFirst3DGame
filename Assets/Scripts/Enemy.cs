@@ -5,9 +5,7 @@ public class Enemy : MonoBehaviour
 {
     public float speed; // How fast enemy moves toward startPos
     public Vector3 moveOffset; // Amount enemy teleports w each Update call
-    [SerializeField]
     private Vector3 targetPos; // Coordinates that trigger IF statement
-    [SerializeField]
     private Vector3 startPos; // Coords where enemy starts
 
     private void OnTriggerEnter(Collider other)
@@ -53,13 +51,11 @@ public class Enemy : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
         // Every frame, if transform.position != targetPos, enemy position updates to move closer to targetPos
-        if (transform.position == targetPos)
+        if (Vector3.Distance(transform.position, targetPos) < 0.001f)
         {
-            transform.position = startPos + moveOffset;
-        }
-        else
-        {
-            targetPos = startPos;
+            targetPos = (targetPos == startPos) 
+                ? startPos + moveOffset 
+                : startPos;
         }
     }
 }
