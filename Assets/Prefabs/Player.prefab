@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   rig: {fileID: 3008198260733425711}
-  jumpForce: 3
-  moveSpeed: 3
+  jumpForce: 4.5
+  moveSpeed: 5
   score: 0
 --- !u!1001 &5809834405534454681
 PrefabInstance:

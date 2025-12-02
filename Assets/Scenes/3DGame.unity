@@ -2032,14 +2032,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5631403466169269686, guid: 5ee7ee851e59d4a3ea8805af55731802, type: 3}
-      propertyPath: jumpForce
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5631403466169269686, guid: 5ee7ee851e59d4a3ea8805af55731802, type: 3}
-      propertyPath: moveSpeed
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 6364988025937690936, guid: 5ee7ee851e59d4a3ea8805af55731802, type: 3}
       propertyPath: m_Name
       value: Player
