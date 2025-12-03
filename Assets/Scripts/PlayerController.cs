@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement; // Lets you reload scenes (Game Over)
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
@@ -11,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     public float moveSpeed;
     private bool isGrounded;
+    public TextMeshProUGUI scoreText;
 
     public int score;
 
@@ -30,7 +32,7 @@ public class PlayerController : MonoBehaviour
     public void AddScore(int amount) // Called when coin is collected
     {
         score += amount;
-        // FIXME: Update score text UI
+        scoreText.text = $"Score: {score}";
     }
 
     void Start()
