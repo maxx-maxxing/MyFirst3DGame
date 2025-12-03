@@ -2126,6 +2126,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndFlag
       objectReference: {fileID: 0}
+    - target: {fileID: 2964492624245763548, guid: 465dd5fa92dfd4bf39b82753be28b55e, type: 3}
+      propertyPath: nextSceneName
+      value: Level2
+      objectReference: {fileID: 0}
     - target: {fileID: 6494890306415949009, guid: 465dd5fa92dfd4bf39b82753be28b55e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.64
